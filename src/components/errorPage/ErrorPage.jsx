@@ -8,6 +8,7 @@ export default function ErrorPage() {
         <h1>404 ERROR</h1>
         <p>This page not found;
 back to home and start again</p>
+
 <Link to={'/'}>HOMEPAGE</Link>
     </div>
   )

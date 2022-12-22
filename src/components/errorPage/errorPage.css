@@ -5,3 +5,29 @@
     justify-content: center;
     align-items: center;
 }
+.errorPage a{
+    width: 187px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 4px;
+
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    
+    transition: 500ms;
+}
+.errorPage a:hover{
+    transition: 1000ms;
+    background-color: rgb(0 0 0 / 30%);
+}
+.errorPage h1{
+    margin-bottom: 24px;
+}
+.errorPage p{
+    margin-bottom: 64px;
+}
