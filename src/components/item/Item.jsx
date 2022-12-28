@@ -10,11 +10,10 @@ export default function Item({item}) {
         <li className='item'>
             <Link to={"/product"} className=''>
                 <div className='containerImage' >
-                    <img className='img' src={"./"+item.title+".png"} alt=''/>
+                    <img className='img' src={"./product/"+item.pictures.main+".png"} alt=''/>
                 </div>
                 <h2>{item.title}</h2>
                 <span>${item.price}</span>
-                
             </Link>
         </li>
   )

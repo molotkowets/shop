@@ -17,7 +17,7 @@ export default function Homepage() {
           <Link to={"/shop"} className='btnViveAll'>View All</Link>
         </div>
         <ul className='goods'>
-          {bd().slice(0,5).map((x) => <Item item={x} key={x.id}/>)}
+          {bd().slice(0, 6).map((x) => <Item item={x} key={x.id}/>)}
         </ul>
     </>
   )
