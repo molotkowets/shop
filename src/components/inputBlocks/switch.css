@@ -1,0 +1,29 @@
+.switch{
+    width: 26px;
+    height: 20px;
+    background: #707070;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    padding: 0 4px;
+}
+.switch .ellipse{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;    
+}
+.switch:hover .ellipse{
+    width: 18px;
+    height: 14px;
+    border-radius: 7px;
+}
+.transitionSwitch{
+    transition: 500ms;
+}
+.switchOn{
+    margin-left: 12px;
+}
+.switchOff{
+    margin-left: 0px;
+}

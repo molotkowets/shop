@@ -49,6 +49,9 @@
 .bottomBorder{
     border-bottom: #D8D8D8 1px solid;
 }
+.active{
+    border-bottom: #000000 2px solid;
+}
 /* .menu .nav li{
     margin-left: 64px;
 }

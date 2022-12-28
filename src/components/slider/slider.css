@@ -1,0 +1,32 @@
+.slider{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.sliderWrapper{
+    margin-bottom: 40px;
+}
+.tracker{
+    height: 2px;
+    background: #234;
+}
+.track0, .track2{
+    height: 2px;
+    background-color: #D8D8D8;   
+}
+.track1{
+    height: 2px;
+    background-color: #000000; 
+}
+
+.thumb {
+    width: 2px;
+    height: 10px;
+    background: #000;
+    /* cursor: pointer */
+}
+.price-min-max{
+    margin-top: 10px;
+}

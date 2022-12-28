@@ -20,6 +20,10 @@
     
 
 .btn-product{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
     width: 193px;
     height: 53px;
     border: 2px solid #fff;
@@ -28,7 +32,7 @@
     color: #fff;
     font-weight: 700;
     font-size: 20px;
-    cursor: pointer;
+    
     transition: 500ms;
 }
 .btn-product:hover{
@@ -56,4 +60,9 @@ color: #000000;
     background: none;
     border: none;
     text-decoration: none;
+}
+.goods{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
 }

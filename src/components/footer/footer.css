@@ -43,3 +43,19 @@
 .footer-social-network li{
     margin-left: 30px;
 }
+.inputContainerFooter{
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+.inputContainerFooter input:focus{
+    /* border: 2px solid #D8D8; */
+    outline: none;
+}
+.inputContainerFooter input{
+    border: none;
+}
+.buttonArrowPushEmail{
+    cursor: pointer;
+    padding: 10px 0px 10px 10px;
+}

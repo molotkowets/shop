@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Item from '../../item/Item'
 import './homepage.css'
+import {bd} from "../../../bd"
 
 export default function Homepage() {
   return (
@@ -8,12 +10,15 @@ export default function Homepage() {
         <div className='presentation'>
           <h1>Gold big hoops </h1>
           <p>$ 68,00</p>
-          <button className='btn-product'>View Product</button>
+          <Link to={"/shop"} className='btn-product'>View Product</Link>
         </div>
         <div className='headStore'>
           <h2>Shop The Latest</h2>
           <Link to={"/shop"} className='btnViveAll'>View All</Link>
         </div>
+        <ul className='goods'>
+          {bd().slice(0,5).map((x) => <Item item={x} key={x.id}/>)}
+        </ul>
     </>
   )
 }

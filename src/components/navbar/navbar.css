@@ -1,0 +1,21 @@
+.navbar{
+    width: 300px;
+    height: 100%;
+}
+
+
+.inputSearchShop{
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin-right: 5px;
+}
+.searchBlock{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D8D8D8;
+    margin: 39px 0;
+}
