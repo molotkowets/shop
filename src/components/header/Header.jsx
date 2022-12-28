@@ -19,10 +19,23 @@ export default function Header() {
           <NavLink className='nav-li left-nav'  to="/out-story"> <li className='nav-button'>Out Story</li></NavLink>
           <li><div className='separator'></div></li>
           <NavLink className='nav-li right-nav' to="/search"><li className='nav-button'><Search/></li></NavLink>
-          <NavLink className='nav-li right-nav' to="/shoppingCart"><li className='nav-button'><ShoppingCart/></li></NavLink>
+          <NavLink className='nav-li right-nav' to="shoppingCart" state={{ background: location }}><li className='nav-button'><ShoppingCart/></li></NavLink>
           <NavLink className='nav-li right-nav' to="/account"><li className='nav-button'><Account/></li></NavLink>
         </ul>
       </div>
     </div>
   )
 }
+
+
+
+///
+// return (
+//   <div>
+//     <h2>Create contextual modal navigation</h2>
+//     <Link to="modal" state={{ background: location }}>
+//       Open Modal
+//     </Link>
+//     <Outlet />
+//   </div>
+// );
