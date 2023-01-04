@@ -3,7 +3,7 @@ export function bd(){
     return(products);
 }
 
-let products = [
+const products = [
     {
         id: 0,
         title: "Lira Earrings",
@@ -221,4 +221,7 @@ let products = [
             grade:  4
         }]
     }
+]
+const blog =[
+    
 ]
