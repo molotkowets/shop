@@ -16,14 +16,7 @@ body {
   margin: 0;
  
 }
-.wrapper{
-  width: 1280px;  /* 1280px */
-  min-height: 100vh;
-  margin:  60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 
 
 

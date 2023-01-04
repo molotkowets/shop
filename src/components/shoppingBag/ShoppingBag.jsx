@@ -5,10 +5,11 @@ import './shoppingBag.css'
 export default function ShoppingBag() {
     const navigate = useNavigate();
     return (
-      <div className="modalDiv">
-        <div className="modal">
+      <div className="ShoppingBagWrapper">
+        <button className='stepBack' onClick={() => navigate(-1)}>Close</button>
+        <div className="modalShoppingBag">
           <h3>Modal</h3>
-          <button onClick={() => navigate(-1)}>Close</button>
+          {/* <button onClick={() => navigate(-1)}>Close</button> */}
         </div>
       </div>
     );

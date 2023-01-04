@@ -2,6 +2,7 @@
 import {Routes, Route, useLocation} from "react-router-dom"
 import ErrorPage from "./components/errorPage/ErrorPage";
 import Layout from "./components/Layout";
+import BlogPage from "./components/pages/blog/BlogPage";
 import Homepage from "./components/pages/home-page/Homepage";
 import Product from "./components/pages/product/Product";
 import ShopPage from "./components/pages/shop-page/ShopPage";
@@ -13,14 +14,14 @@ function App() {
     <>
       <Routes location={background || location}>
         <Route path="/" element={<Layout/>}>
-          
           <Route index element={<Homepage />}/>
           <Route path="/shop" element={<ShopPage/>}/>
           <Route path="*" element={<ErrorPage/>}/>
           <Route path="/product" element={<Product/>}/>
-          
+          <Route path="/blog" element={<BlogPage/>}/>
         </Route>
       </Routes>
+
       {background && (
         <Routes>
           <Route path="shoppingCart" element={<ShoppingBag />} />
