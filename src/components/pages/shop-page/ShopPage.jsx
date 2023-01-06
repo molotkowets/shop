@@ -6,11 +6,11 @@ import {bd} from "../../../bd"
 
 export default function ShopPage() {
   return (
-    <div className='mainShop'>
+    <div className='mainWrapper'>
       <Sidebar/>
         <div className='productCards'>
           <ul className='goods'>
-            {bd().slice(0, 6).map((x) => <Item item={x} key={x.id}/>)}
+            {bd("products").slice(0, 6).map((x) => <Item item={x} key={x.id}/>)}
           </ul>
         </div>
     </div>

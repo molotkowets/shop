@@ -1,0 +1,13 @@
+.blogImgContainer{
+   
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    /* aspect-ratio: 1; */
+    justify-content: center;
+}
+.blogImgContainer img{
+    width: 100%;
+
+}

@@ -1,0 +1,8 @@
+.blogCards{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.blogCards li{
+    list-style: none;
+}

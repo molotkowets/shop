@@ -20,7 +20,7 @@ export default function Sidebar() {
         "rating"
     ]
   return (
-    <nav className='navbar'>
+    <nav className='sidebar'>
         <h1>Shop The Latest</h1>
         {/* <div className='searchBlock'>
             <input className='inputSearchShop' type={'text'} placeholder={"Search..."}/>

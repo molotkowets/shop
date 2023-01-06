@@ -8,8 +8,7 @@ import { ReactComponent as Heart } from '../../icon/heart.svg'
 export default function Item({item}) {
     const[img, setImg] = useState('')
     
-    function mouseEnter (){
-        // boxRef.current.style.height = "50px" 
+    function mouseEnter (){   // при наведенні курсора на карту товару, відображається інша картинка 
         console.log("event hover")
         setImg('-1')
        }

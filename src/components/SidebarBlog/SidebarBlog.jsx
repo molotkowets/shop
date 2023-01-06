@@ -4,13 +4,10 @@ import './SidebarBlog.css'
 
 export default function SidebarBlog() {
   return (
-    <>
+    <div className='sidebar'>
+      <h1>Blog</h1>
         <SearchSidebar/>
-        <div className='containerBlogCards'>
-            <ul className='goods'>
-                {bd().slice(0, 6).map((x) => <Item item={x} key={x.id}/>)}
-            </ul>
-        </div>
-    </>
+        
+    </div>
   )
 }

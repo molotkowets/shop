@@ -4,6 +4,7 @@ import ErrorPage from "./components/errorPage/ErrorPage";
 import Layout from "./components/Layout";
 import BlogPage from "./components/pages/blog/BlogPage";
 import Homepage from "./components/pages/home-page/Homepage";
+import Post from "./components/pages/post/Post";
 import Product from "./components/pages/product/Product";
 import ShopPage from "./components/pages/shop-page/ShopPage";
 import ShoppingBag from "./components/shoppingBag/ShoppingBag";
@@ -14,11 +15,13 @@ function App() {
     <>
       <Routes location={background || location}>
         <Route path="/" element={<Layout/>}>
+          <Route path="*" element={<ErrorPage/>}/>
           <Route index element={<Homepage />}/>
           <Route path="/shop" element={<ShopPage/>}/>
-          <Route path="*" element={<ErrorPage/>}/>
           <Route path="/product" element={<Product/>}/>
-          <Route path="/blog" element={<BlogPage/>}/>
+          <Route path="/blog" exact={true} element={<BlogPage/>}/>
+          {/* <Route path="/post" element={<Post/>}/> */}
+          <Route path="/blog/:id" element={<Post/>}/>
         </Route>
       </Routes>
 

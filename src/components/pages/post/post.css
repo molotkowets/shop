@@ -1,0 +1,43 @@
+.postContainer{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
+.postWrapper h1, .postWrapper h2, .postWrapper h3 {
+    text-align: center;
+}
+.postWrapper h1{
+    padding-bottom: 20px;
+}
+
+.postWrapper h2{
+    padding: 20px 0;
+}
+.postWrapper h3{
+    padding-top: 15px;
+}
+
+.postWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.postWrapper p{
+    margin-bottom: 15px;
+}
+.postImgRight{
+    width: 300px;
+    height: 400px;
+    float: right;
+    padding: 0 0 10px 20px;
+}
+.postImgLeft{
+    width: 400px;
+    float: left;
+    padding: 0 20px 10px 0;
+}
+.postImgTop{
+    padding-bottom: 60px;
+}
