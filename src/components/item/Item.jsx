@@ -6,20 +6,20 @@ import { ReactComponent as ShoppingCart } from '../../icon/shopping-cart.svg'
 import { ReactComponent as Heart } from '../../icon/heart.svg'
 
 export default function Item({item}) {
-    const[img, setImg] = useState('')
+    const[img, setImg] = useState(item.pictures.main)
     
     function mouseEnter (){   // при наведенні курсора на карту товару, відображається інша картинка 
         console.log("event hover")
-        setImg('-1')
+        setImg(item.pictures.additional[0])
        }
        function mouseLeave(){
-        setImg('')
+        setImg(item.pictures.main)
        }
     return (
         <li className='item' onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()}>
-            <Link to={"/product"} className=''>
+            <Link to={`/product/${item.id}`} className=''>
                 <div className='containerImage' >
-                    <img className='img' src={"./product/" + item.pictures.main + img + ".png"} alt=''/>
+                    <img className='img' src={"./product/" +  img} alt=''/>
                 </div>
                 <h2>{item.title}</h2>
                 <span>${item.price}</span>

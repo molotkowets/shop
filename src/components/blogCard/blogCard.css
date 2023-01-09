@@ -1,5 +1,4 @@
 .blogImgContainer{
-   
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -9,5 +8,39 @@
 }
 .blogImgContainer img{
     width: 100%;
+}
 
+.titleBlogCard{
+    margin-bottom: 14px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+   
+}
+.dataBlog{
+    padding: 16px 0 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #707070;
+}
+.blogCartDescription{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;
+    color: #707070;
+}
+.buttonReadMore{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #A18A68;
+    margin-top: 24px;
 }

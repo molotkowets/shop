@@ -11,6 +11,22 @@ import ShoppingBag from "./components/shoppingBag/ShoppingBag";
 function App() {
   const location = useLocation();
   const background = location.state && location.state.background;
+
+  let body = document.querySelector('body');
+  body.addEventListener('scroll', () => { 
+    let scrollTop = body.scrollHeight;
+    console.log(scrollTop);
+
+let headerWrapper = document.querySelector('.header-wrapper');
+console.log(headerWrapper);
+
+if(scrollTop >= 100){
+    headerWrapper.classList.add('hide');
+}else{    
+    headerWrapper.classList.remove('hide');
+}
+});
+
   return (
     <>
       <Routes location={background || location}>
@@ -18,10 +34,9 @@ function App() {
           <Route path="*" element={<ErrorPage/>}/>
           <Route index element={<Homepage />}/>
           <Route path="/shop" element={<ShopPage/>}/>
-          <Route path="/product" element={<Product/>}/>
-          <Route path="/blog" exact={true} element={<BlogPage/>}/>
-          {/* <Route path="/post" element={<Post/>}/> */}
-          <Route path="/blog/:id" element={<Post/>}/>
+          <Route path="/product/:id" element={<Product/>}/> 
+          <Route path="/blog"  element={<BlogPage/>}/>
+          <Route path="/post/:id" element={<Post/>}/>
         </Route>
       </Routes>
 
@@ -34,4 +49,9 @@ function App() {
   );
 }
 
+
+
 export default App;
+
+
+//exact={true}// - прибрав з блока (розібратись чи в цій версії потрібно)

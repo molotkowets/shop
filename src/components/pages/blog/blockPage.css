@@ -1,6 +1,6 @@
 .blogCards{
     display: grid;
-    gap: 20px;
+    gap: 45px;
     grid-template-columns: repeat(2, 1fr);
 }
 .blogCards li{
