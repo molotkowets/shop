@@ -34,7 +34,7 @@ if(scrollTop >= 100){
           <Route path="*" element={<ErrorPage/>}/>
           <Route index element={<Homepage />}/>
           <Route path="/shop" element={<ShopPage/>}/>
-          <Route path="/product/:id" element={<Product/>}/> 
+          <Route path="/product/:category/:id" element={<Product/>}/> 
           <Route path="/blog"  element={<BlogPage/>}/>
           <Route path="/post/:id" element={<Post/>}/>
         </Route>

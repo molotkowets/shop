@@ -4,15 +4,15 @@ import { useParams } from 'react-router-dom'
 import {bd} from '../../../bd'
 
 export default function Product() {
-  const product = returnMatch(bd("products"), useParams().id)
-
+  const product = returnMatch(bd("newProducts")[useParams().category], useParams().id)
+  console.log(useParams().id)
   const [mainImg, setMainImg] = useState(product.pictures.main)
 
   const [arrowScroll, setArrowScroll] = useState("bottomArrowScroll")
   
   const listPictures = [product.pictures.main] 
   product.pictures.additional.map((img) => listPictures.push(img))
-  console.log(Object.keys(bd("newProducts")))
+  
   function myFunction(e){
 
     
@@ -44,11 +44,11 @@ export default function Product() {
         <div className='product-about-left'>
           <div className={'wrapperContainerImgButton ' + arrowScroll}>
               <ul onScroll={(event)=>myFunction(event)} className='containerImgButton'>
-                {listPictures.map((name, index)=><li key={index} className='wrapperImgButton'><img  className='imgButton borderRadius' onClick={()=>setMainImg(name)} src={"http://localhost:3000/product/" + name} alt={name}/></li>)}
+                {listPictures.map((name, index)=><li key={index} className='wrapperImgButton'><img  className='imgButton borderRadius' onClick={()=>setMainImg(name)} src={"http://localhost:3000/product/" + product.category + "/" + name} alt={name}/></li>)}
               </ul>
           </div>
           <div className='containerMainImgSlider'>
-            <img className='MainImgSlider borderRadius' src={"http://localhost:3000/product/" + mainImg} alt=''/>
+            <img className='MainImgSlider borderRadius' src={"http://localhost:3000/product/"  + product.category + "/" + mainImg} alt=''/>
           </div>      
         </div>
         <div className='product-about-right'>
@@ -78,16 +78,17 @@ export default function Product() {
 }
 
 function returnMatch(arr, id){
- 
+  // console.log(category)
   let prod;
-  for(let i=0; i<arr.length; i++ ){
+  for(let i=0; i < arr.length; i++){
+    console.log(i)
     if(arr[i].id === id){
-      prod = i 
+      prod = i
       break;
     }else{
-      alert("error 404, product not found")
-     return(false) 
+      console.log(arr.length)     
     }
   }
+  
 return arr[prod]
 }

@@ -5,7 +5,7 @@ export function bd(x){
             return( eval(item[i]))   
         }
     }
-    
+   
 }
 // function categories(){
 //     let categories = []
@@ -296,6 +296,7 @@ const newProducts = {
         {
             id: "00",
             quantity: 15,
+            category: "earrings",
             subcategory: ["з камнями", "сережки - кільця"],
             title: "Срібні сережки - кільця (фіаніти)",
             material: "срібло",
@@ -329,6 +330,7 @@ const newProducts = {
         },{
             id: "01",
             quantity: 12,
+            category: "earrings",
             subcategory: ["з камнями","пусети", "сережки - кільця"],
             title: "Срібні сережки - пусети \"Кругообіг\" (чорні фіаніти)",
             material: "срібло",
@@ -362,6 +364,7 @@ const newProducts = {
         },{
             id: "02",
             quantity: 21,
+            category: "earrings",
             subcategory: ["з камнями", "джекети"],
             title: "Срібні сережки - джекети з фіанітами",
             material: "срібло",
@@ -396,6 +399,7 @@ const newProducts = {
         },{
             id: "03",
             quantity: 5,
+            category: "earrings",
             subcategory: ["з камнями", "пусети"],
             title: "Сережки-пусети (культ. прісн. перли) 7 мм",
             material: "срібло",
@@ -448,6 +452,7 @@ const newProducts = {
         },{
             id: "04",
             quantity: 18,
+            category: "earrings",
             subcategory: ["з камнями", "протяжки", "Клевер"],
             title: "Срібні сережки - протяжки \"Клевер\" з оніксом",
             material: "срібло",
@@ -491,6 +496,7 @@ const newProducts = {
         },{
             id: "05",
             quantity: 18,
+            category: "earrings",
             subcategory: ["без каменів", "джекети",],
             title: "Сережки - джекети \"Фріда\" у червоному золоті",
             material: "золото",
@@ -539,6 +545,7 @@ const newProducts = {
         },{
             id: "06",
             quantity: 9,
+            category: "earrings",
             subcategory: ["з камнями", "клевер", "протяжки"],
             title: "Золоті сережки - протяжки \"Клевер\" з перламутром",
             material: "золото",
@@ -565,6 +572,7 @@ const newProducts = {
         },{
             id: "07",
             quantity: 13,
+            category: "earrings",
             subcategory: ["без каменів", "сережки - кільця"],
             title: "Золоті сережки - протяжки \"Клевер\" з перламутром",
             material: "золото",
@@ -603,6 +611,7 @@ const newProducts = {
         {
             id: "10",
             quantity: 7,
+            category: "rings",
             subcategory: ["з камнями", "заручальні каблучки"],
             title: "Золота заручальна каблучка \"Я кохаю тебе\" з фіанітами",
             material: "золото",
@@ -649,6 +658,7 @@ const newProducts = {
         },{
             id: "11",
             quantity: 3,
+            category: "rings",
             subcategory: ["з камнями", "заручальні каблучки"],
             title: "Помолвочное золотое кольцо с фианитом",
             material: "золото",
@@ -692,6 +702,7 @@ const newProducts = {
         },{
             id: "12",
             quantity: 16,
+            category: "rings",
             subcategory: ["з камнями", "заручальні каблучки"],
             title: "Заручальна срібна каблучка з фіанітом",
             material: "срібло",
@@ -737,6 +748,7 @@ const newProducts = {
         },{
             id: "13",
             quantity: 4,
+            category: "rings",
             subcategory: ["діаманти"],
             title: "Золота каблучка з чорним і білими діамантами",
             material: "золото",
@@ -779,6 +791,7 @@ const newProducts = {
         },{
             id: "14",
             quantity: 8,
+            category: "rings",
             subcategory: ["діаманти"],
             title: "Золотое кольцо с белыми и черными бриллиантами",
             material: "золото",
@@ -812,6 +825,7 @@ const newProducts = {
         },{
             id: "15",
             quantity: 9,
+            category: "rings",
             subcategory: ["каблучка на фалангу", "без каменів"],
             title: "Срібна каблучка \"Змій Уроборос\"",
             material: "срібло",
@@ -859,6 +873,7 @@ const newProducts = {
         },{
             id: "16",
             quantity: 3,
+            category: "rings",
             subcategory: ["з камнями", "каблучка на фалангу", "подвійна"],
             title: "Золота каблучка на дві фаланги з фіанітами",
             material: "золото",
@@ -900,6 +915,7 @@ const newProducts = {
         },{
             id: "17",
             quantity: 4,
+            category: "rings",
             subcategory: ["без каменів", "каблучка на фалангу", "подвійна"],
             title: "Срібна каблучка \"Мінімалізм\"",
             material: "срібло",

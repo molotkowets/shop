@@ -7,22 +7,21 @@ import { ReactComponent as Heart } from '../../icon/heart.svg'
 
 export default function Item({item}) {
     const[img, setImg] = useState(item.pictures.main)
-    
-    function mouseEnter (){   // при наведенні курсора на карту товару, відображається інша картинка 
-        console.log("event hover")
+    function mouseEnter (){   // при наведенні курсора на карту товару, відображається друга картинка 
+        // console.log("event hover")
         setImg(item.pictures.additional[0])
-       }
-       function mouseLeave(){
+    }
+    function mouseLeave(){ // при наведенні курсора на карту товару, відображається перша картинка 
         setImg(item.pictures.main)
-       }
+    }
     return (
         <li className='item' onMouseEnter={()=>mouseEnter()} onMouseLeave={()=>mouseLeave()}>
-            <Link to={`/product/${item.id}`} className=''>
+            <Link to={`/product/${item.category + "/" + item.id}`} className=''>
                 <div className='containerImage' >
-                    <img className='img' src={"./product/" +  img} alt=''/>
+                    <img className='img' src={"./product/" + item.category + "/" +  img} alt=''/>
                 </div>
                 <h2>{item.title}</h2>
-                <span>${item.price}</span>
+                <span>${item.description.price}</span>
             </Link>
             <div className='hoverItem'>    
                 <button className='buttonContainerIcon'><Heart onClick={()=>addProductTo("Heart")} className='iconItemHover'/></button>

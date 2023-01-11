@@ -11,7 +11,7 @@ export default function InputList(props) {
                 <ArrowInput/>
             </div>
             <datalist id="filter">
-                {props.options.map((by)=><option>{by}</option>)}
+                {props.options.map((by, index)=><option key={index}>{by}</option>)}
             </datalist> 
         </form>
    </div>
