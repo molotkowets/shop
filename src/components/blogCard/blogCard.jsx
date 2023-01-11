@@ -4,7 +4,7 @@ import './blogCard.css'
 
 
 export default function BlogCard(props) {
-  console.log(props.item.pictures.main)
+  // console.log(props.item.pictures.main)
   return (
 
     <li className='blogCard'>
