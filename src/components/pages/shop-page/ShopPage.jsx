@@ -1,31 +1,62 @@
-import React from 'react'
-import Item from '../../item/Item'
-import Sidebar from '../../sidebarShop/SidebarShop'
-import './shopPage.css'
-import {bd} from "../../../bd"
+import React, { useEffect, useState } from "react";
+import Item from "../../item/Item";
+import Sidebar from "../../sidebarShop/SidebarShop";
+import "./shopPage.css";
+import { filterProducts } from "../../../filterProducts";
+import { ButtonAddMore } from "../../auxiliary/ButtonAddMore";
 
 export default function ShopPage() {
+  const [filterParameters, setFilterParameters] = useState({
+    search: "",
+    category: "all",
+    material: "all",
+    price: {
+      min: "",
+      max: "",
+    },
+    filterPrice: {
+      min: "",
+      max: "",
+    },
+    onSale: false,
+    inStock: false,
+  });
+  console.log(filterParameters.price.max);
 
-  // console.log(filterProducts(bd, "all"))
+  const [productReturn, setProductReturn] = useState([]);
+
+  useEffect(() => {
+    filterProducts(filterParameters, setProductReturn, setFilterParameters);
+  }, [filterParameters]);
   return (
-    <div className='mainWrapper'>
-      <Sidebar/>
-        <div className='productCards'>
-          <ul className='goods'>
-            {filterProducts(bd, "all").slice(0, 6).map((x) => <Item item={x} key={x.id}/>)}
-          </ul>
+    <>
+      {filterParameters.price.min ? (
+        <div className="mainWrapper">
+          <Sidebar
+            setFilterParameters={setFilterParameters}
+            filterProducts={filterProducts}
+            product={productReturn}
+            setProductReturn={setProductReturn}
+            filter={filterParameters}
+            setFilter={setFilterParameters}
+          />
+          <div className="productCards">
+            <ul className="goods">
+              {productReturn.slice(0, 6).map((x) => (
+                <Item item={x} key={x.id} />
+              ))}
+            </ul>
+
+            <div className="">
+              <ButtonAddMore quantity={productReturn.length} />
+            </div>
+          </div>
         </div>
-    </div>
-  )
+      ) : (
+        ""
+      )}
+    </>
+  );
 }
 
-
-function filterProducts(bd, params){
-  if(params === "all"){
-    let productPush = [];
-    for(let i=0; i<Object.keys(bd("newProducts")).length; i++){
-      productPush.push(...bd("newProducts")[Object.keys(bd("newProducts"))[i]])
-    }
-    return productPush
-  }else {return "no params"}
-}
+function resultPage() {}

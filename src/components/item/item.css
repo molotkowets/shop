@@ -63,3 +63,10 @@
     margin: 10px 5px 0px;
     transition: 250ms;
 }
+.containerPrice{
+    display: flex;
+    align-items: center;
+}
+.delPrice{
+    padding-left: 10px;
+}

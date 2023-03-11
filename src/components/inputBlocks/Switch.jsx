@@ -1,20 +1,22 @@
-import React, { useState } from 'react'
-import './switch.css'
+import React, { useState } from "react";
+import "./switch.css";
 
-export default function Switch() {
-    const [count, setCount] = useState({class: "switchOff", status: false});
+export default function Switch({ filter, setFilter, type }) {
+  const [count, setCount] = useState({ class: "switchOff", status: false });
   return (
-    <div onClick={()=>switcher(count, setCount)} className={'switch transitionSwitch ' } >
-        <div className={'ellipse transitionSwitch ' + count.class}></div>
+    <div
+      onClick={() => switcher(filter, setFilter, type, count, setCount)}
+      className={"switch transitionSwitch "}
+    >
+      <div className={"ellipse transitionSwitch " + count.class}></div>
     </div>
-  )
+  );
 }
-function switcher(arr, func){
-    if(arr.status){
-        func({class: "switchOff", status: false})
-        console.log("off", {class: "switchOff", status: false})
-    }else{
-        func({class: "switchOn",status: true})
-        console.log("on", {class: "switchOn",status: true})
-    }
+function switcher(filter, setFilter, type, count, setCount) {
+  setFilter({ ...filter, [type]: !count.status });
+  if (filter[type]) {
+    setCount({ class: "switchOff", status: false });
+  } else {
+    setCount({ class: "switchOn", status: true });
+  }
 }
